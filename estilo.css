@@ -2,7 +2,7 @@ a:link, a:active, a:visited {
 text-decoration: none;
 }
 a:hover {
-font-size: 12;
+font-size: 1.2rem;
 text-decoration: none;
 }
 * {
@@ -11,7 +11,6 @@ margin: 0;
 padding: 0;
 }
 body {
-
 font-size: 1.2rem;
 font-family: Arial, Helvetica, sans-serif;
 background-image: url(./2cf296c94a91d9d7ef8eb5e5326398bd.jpg);
@@ -39,14 +38,14 @@ html{
 }
 .indice {
     padding: 2px 2px 0 12px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: end;
 }
 .ttV{
     color: white;
     background-color: #000000;
     border-radius: 16px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding: 4px;
     text-align: center;
 }
@@ -60,7 +59,7 @@ html{
 .C1{
     border-radius: 8px;
     padding: 4px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 
 }
 .boton1 { 
@@ -75,60 +74,53 @@ html{
     color: rgb(9 9 153);
     border: solid 0.1px;
     border-radius: 12px;
-    font-size: 1.4rem;
-    padding: 3px;
+    font-size: 1.2rem;
+    padding: 4px;
 }
 .tablas { 
 border-left:2px solid #C0C0C0; 
 border-right:2px solid #000000; 
 border-top:2px solid #C0C0C0; 
 border-bottom:2px solid #000000; 
-padding:1; 
+padding:4px; 
 background-color:#808080  ;
-border-radius: 10px;
+border-radius: 12px;
  }
 
 .celda{ 
-    padding: 4px;
-    font-size: 1.4rem;
-    background-color: #efeffb;
-    text-align: center;
-    border-radius: 8px;
-   }
+padding: 4px;
+font-size: 1.2rem;
+background-color: #efeffb;
+text-align: center;
+border-radius: 8px;
+}
 .celdas3{
     text-align: center;
 }
-
-
 .celda_titulo { 
-    border-radius: 4px;
+border-radius: 4px;
 padding:4px; 
 background-color:#A6D2FF; 
-font-size:1.4rem;   }
-
+font-size:1.2rem;   
+}
 .titulo_tabla { 
-border-radius: 4px;
+border-radius: 8px;
 padding: 4px;
 background-color:#232394; 
-font-size:12pt; 
+font-size:1.4rem; 
 color:#FFFFFF; 
-text-align:center   }
-
+text-align:center  
+}
 .info{
     font-size: 1.2rem;
     padding: 4px;
-    border-radius: 4px;
+    border-radius: 8px;
     border: transparent;
     background: #ddefffad;
-
 }
-
 select {
     border-radius: 12px;
-
 }
-
 img{
     width: 100%;
-    
 }
