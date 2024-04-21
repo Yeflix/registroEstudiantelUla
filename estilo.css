@@ -1,15 +1,9 @@
-a:link, a:active, a:visited {
-text-decoration: none;
-}
-a:hover {
-font-size: 1.2rem;
-text-decoration: none;
-}
-* {
+*{
 box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 body {
 font-size: 1.2rem;
 font-family: Arial, Helvetica, sans-serif;
@@ -18,12 +12,17 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position-x: center;
 background-position-y: top;
+font-family: "Open Sans", sans-serif;
 }
 html{
     font-size: 62.5%;
 }
 img{
     width: 100%;
+}
+a{
+    text-decoration: none;
+    color: oklch(0.38 0.11 159.08);
 }
 .nav{
     display: flex;
@@ -50,7 +49,7 @@ img{
 }
 .ttV{
     color: white;
-    background-color: #000000;
+    background-color: #2f6fcf;
     border-radius: 16px;
     font-size: 1.4rem;
     padding: 4px;
@@ -81,8 +80,49 @@ img{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
-
+.link-pag{
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rainbow{
+    100%,0%{
+      color: rgb(255,0,0);
+    }
+    8%{
+      color: rgb(255,127,0);
+    }
+    16%{
+      color: rgb(255,255,0);
+    }
+    25%{
+      color: rgb(127,255,0);
+    }
+    33%{
+      color: rgb(0,255,0);
+    }
+    41%{
+      color: rgb(0,255,127);
+    }
+    50%{
+      color: rgb(0,255,255);
+    }
+    58%{
+      color: rgb(0,127,255);
+    }
+    66%{
+      color: rgb(0,0,255);
+    }
+    75%{
+      color: rgb(160, 65, 255);
+    }
+    83%{
+      color: rgb(255, 103, 255);
+    }
+    91%{
+      color: rgb(255, 49, 152);
+    }
+  }
+  
 .boton1 { 
     width: 90%;
     color: rgb(0, 0, 102);
@@ -137,9 +177,33 @@ font-weight: 600;
     border-radius: 8px;
 }
 select {
+    text-shadow: none;
+   
+
+}
+input{
+    text-align: center;
+}
+select:not(:-internal-select-author-button) {
+    appearance: auto;
+    box-sizing: border-box;
+    align-items: center;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: rgb(255, 237, 134);
+    cursor: pointer;
+    white-space: pre;
+    border-width: 1px;
+    border-style: solid;
+    border-color: (rgb(216, 40, 40), rgb(156, 1, 1));
+    border-image: space;
+    padding: 2px;
     border-radius: 12px;
 }
-
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+    border-radius: 12px;
+}
 @media (min-width: 425px) {
     .logoUla{
         width: 35%;
@@ -162,6 +226,7 @@ select {
     }
   }
   @media (min-width: 1000px) {
+    
     .logoUla{
         width: 20%;
     }
