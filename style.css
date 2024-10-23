@@ -8,10 +8,10 @@ body {
 font-size: 1.2rem;
 font-family: Arial, Helvetica, sans-serif;
 background-image: url(./2cf296c94a91d9d7ef8eb5e5326398bd.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-background-position-x: center;
-background-position-y: top;
+background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+background-position: center; /* Centra la imagen en el fondo */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
 font-family: "Open Sans", sans-serif;
 }
 
