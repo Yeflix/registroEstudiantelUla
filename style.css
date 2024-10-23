@@ -4,6 +4,9 @@ margin: 0;
 padding: 0;
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+html{
+    font-size: 62.5%;
+}
 body {
 font-size: 1.2rem;
 font-family: Arial, Helvetica, sans-serif;
@@ -12,22 +15,16 @@ background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
 background-position: center; /* Centra la imagen en el fondo */
 background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
-font-family: "Open Sans", sans-serif;
-}
-
 .indice {
     font-weight: 600;
 }
 .subtitulo{
     font-weight: 600;
 }   
-html{
-    font-size: 62.5%;
-}
 img{
     width: 100%;
 }
-a{
+a{ 
     text-decoration: none;
     color: oklch(0.38 0.11 159.08);
 }
@@ -73,7 +70,6 @@ select{
     border: transparent;
     background: #ddefffad;
     padding: 4px;
-    
 }
 .C1{
     border-radius: 8px;
@@ -101,6 +97,7 @@ select{
     text-decoration-style: wavy;
     font-size: 1.8rem;
     font-style: oblique;
+    border-radius: 8px;
 }
 .boton1 { 
     width: 90%;
