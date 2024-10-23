@@ -68,11 +68,12 @@ select{
     margin: 8px 0 4px 0;
 }
 .formu{
-    margin: 8px;
+    margin: 8px 8px 0 8px;
     border-radius: 8px;
     border: transparent;
     background: #ddefffad;
     padding: 4px;
+    
 }
 .C1{
     border-radius: 8px;
