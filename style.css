@@ -196,7 +196,7 @@ input{
   }
 @media (min-width: 1200px) {
     select, .C1, .celda, .boton2, .celda_titulo, .indice, .subtitulo, #captcha-input{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     p{
         padding: 4px
