@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de CAPTCHA</title>
+    <style>
+        #captcha-canvas {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de CAPTCHA</h1>
+    <canvas id="captcha-canvas" width="200" height="50"></canvas>
+    <input type="text" id="captcha-input" placeholder="Ingrese el código CAPTCHA">
+    <button id="verificar-captcha">Verificar</button>
+    <script>
+        function generateCaptcha() {
+            const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let captchaCode = "";
+            for (let i = 0; i < 6; i++) {
+                captchaCode += alphabets.charAt(Math.floor(Math.random() * alphabets.length));
+            }
+            return captchaCode;
+        }
+
+        function drawCaptchaImage(captchaCode) {
+            const canvas = document.getElementById("captcha-canvas");
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.font = "24px Arial";
+            ctx.fillStyle = "#333";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(captchaCode, canvas.width / 2, canvas.height / 2);
+        }
+
+        const captchaCode = generateCaptcha();
+        drawCaptchaImage(captchaCode);
+
+        document.getElementById("verificar-captcha").addEventListener("click", function() {
+            const userInput = document.getElementById("captcha-input").value;
+            if (userInput === captchaCode) {
+                alert("Código CAPTCHA correcto!");
+            } else {
+                alert("Código CAPTCHA incorrecto. Intente de nuevo.");
+            }
+        });
+    </script>
+</body>
+</html>

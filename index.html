@@ -3,87 +3,86 @@
 <meta charset="UTF-8">     
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="./estilo.css">
+<link rel="stylesheet" href="./style.css">
 <link rel="shortcut icon" href="./2vijqewp.png" />
 <title>ORE-CIENCIAS. ULA-SIRE.</title>
-<script language="JavaScript1.2" src="./funcion.js.descargar">
-</script>
 </head>
+
 <body>
-        
- <section class="back" id="AutoNumber1">
+<section class="back" id="AutoNumber1">
         <div class="nav">
-        <div  class="logoUla">
-                <a href="http://www.ula.ve/" ><img src="./psliqd4k.png"></a>
-                </img>
-        </div>
-        <div class="indice" >Oficina de Registros Estudiantiles.
-                <br>Facultad de Ciencias.
-        </div>
+         <div  class="logoUla">
+           <a href="http://www.ula.ve/" ><img src="./psliqd4k.png"></a>
+         </div>
+         <div class="indice" >Oficina de Registros Estudiantiles.
+           <br>Facultad de Ciencias.
+         </div>
         </div>
    
-        <div class="ttV" >Sistema Integrado de Registros Estudiantiles
-        <br> Version <a class="link-pag" href="https://www.facebook.com/YefriDev/">YefriDev 1.0</a>
+        <div class="subtitulo" >Sistema Integrado de Registros Estudiantiles
+         <br> Version <a class="link-pag" href="https://www.facebook.com/YefriDev/">YefriDev 1.2</a>
         </div>
- </section>
+
+</section>
 
 <section class="main-section" name="proceso" action="http://intranetx.adm.ula.ve/ore_ccs/valida.php" method="post">
-<input type="hidden" value="C" name="cfac">
-<input type="hidden" value="ciencias" name="nfac">
+        <input type="hidden" value="C" name="cfac">
+        <input type="hidden" value="ciencias" name="nfac">
         <div>
-           <section >
-                <table class="formu" cellpadding="2" id="AutoNumber3">
-                        <div><div>
-                                <td class="C1" colspan="3">
-                                <p>Sistemas disponibles a los usuarios</p>
-                        </td>
-                        </div>
-                        <tr>
-                                <td class="celda_titulo" align="center">Sistema</td>
-                                <td class="celda_titulo" align="center">Periodo</td>
-                                <td class="celda_titulo" align="center">Accion</td>
-                        </tr>
-                        <tr class="celdas3">
-                                <td class="celda" align="right">Consulta Estudiante </td>
-                                <td class="celda" align="center"><select size="1" name="dper">
-				<option value="2023-3">B2023</option>
-				<option value="2024-1" selected="">A2024</option>
-                                </select></td>
-
-                                <td>
-                                <button value="Inscripciones" type="submit"  class="boton2" onmouseout="cambia_estilo(this,0);" onmouseover="cambia_estilo(this,1);" name="B_CEPI" onclick="codigo(security_code);">
-                                Ir a Consultas</button> 
-                                </td>
-                        </tr>         
-                        <tr class="celdas3">
-                                <td class="celda" align="right">Inscripcion de Asignaturas</td>
-                                <td class="celda" align="center">
-                                <select size="1" name="dper_insc" style="color: rgb(0, 0, 102);">
-                                <option value="2024-1" selected="">A2024</option>
-                                </select></td>
-                                <td>
-                                <button value="Consultas" type="submit"  class="boton2" onmouseout="cambia_estilo(this,0);" onmouseover="cambia_estilo(this,1);" name="B_PI" onclick="codigo(security_code);">
-                                Ir a Inscripciones</button>
-                                </td>                  
-                        </tr>
-                        <tr class="celdas3">             
-                                <td class="celda" >Consulta de Profesores</td>
-                                <td class="celda" >&nbsp; <select  disabled="disabled" name="dper"><option selected=""  >A2024</option></select></td>
-                                <td>
-                                <button value="Consultas Profesores" id="B_SCP" type="submit"  class="boton2" onmouseout="cambia_estilo(this,0);" onmouseover="cambia_estilo(this,1);" name="B_SCP" onclick="codigo(security_code);">
-                                Entrar al Sistema</button>   
-
-                                </td>
-                        </tr>
-                        <tr>
-                                <td class="celda" align="right">Codigo de Seguridad</td>
-                                <td class="celda" class="cap"><img src="./CaptchaSecurityImages.php"></td>
-                                <td class="celda" align="center"><p >Ingrese el Codigo de Seguridad</p><br>
-<input id="security_code" name="security_code" type="text" size="8" autocomplete="Off" onkeydown="testForEnter();" onkeypress="return pulsar(event)">
-                        </td>
-                        </tr>
-                </div></table>
-           </section>
+        <section>
+            <table class="formu" cellpadding="2" id="AutoNumber3">
+                <div>
+                <td class="C1" colspan="3"> <p>Sistemas disponibles a los usuarios</p> </td>
+                </div>
+          <tr>
+                <td class="celda_titulo" align="center">Sistema</td>
+                <td class="celda_titulo" align="center">Periodo</td>
+                <td class="celda_titulo" align="center">Accion</td>
+          </tr>
+        <tr class="celdas3">
+                <td class="celda" align="right">Consulta Estudiante</td>
+                <td class="celda" align="center"><select size="1" name="dper">
+		  <option value="2023-3">B2023</option>
+		  <option value="2024-1" selected="">A2024</option>
+                  </select>
+                </td>
+                <td>
+                  <button onclick="validateCaptcha()" value="Inscripciones" type="submit"  class="boton2" onmouseout="cambia_estilo(this,0);" onmouseover="cambia_estilo(this,1);" name="B_CEPI" onclick="codigo(security_code);">
+                   Ir a Consultas</button> 
+                </td>
+        </tr>         
+        <tr class="celdas3">
+                <td class="celda" align="right">Inscripcion de Asignaturas</td>
+                <td class="celda" align="center">
+                  <select size="1" name="dper_insc" style="color: rgb(0, 0, 102);">
+                  <option value="2024-1" selected="">A2024</option>
+                  </select>
+                </td>
+                <td>
+                  <button onclick="validateCaptcha()"  value="Consultas" type="submit"  class="boton2" onmouseout="cambia_estilo(this,0);" onmouseover="cambia_estilo(this,1);" name="B_PI" onclick="codigo(security_code);">
+                  Ir a Inscripciones</button>
+                </td>                  
+        </tr>
+        <tr class="celdas3">             
+                <td class="celda" >Consulta de Profesores</td>
+                <td class="celda" >&nbsp; </select> </td>
+                <td>
+                  <button onclick="validateCaptcha()" id="verificar-captcha" value="Consultas Profesores" type="submit" class="boton2" onmouseout="cambia_estilo(this,0);" onmouseover="cambia_estilo(this,1);" name="B_SCP" onclick="codigo(security_code);">
+                  Entrar al Sistema</button>   
+                </td>
+        </tr>
+        <tr>
+          <td class="celda" align="right">Codigo de Seguridad</td>
+          <td class="celda" class="cap"> 
+            <span class="captcha" id="captcha"></span>
+            <canvas id="captcha-canvas"  width="150" height="50"></canvas>
+          </td>
+          <td class="celda" align="center"><p >Ingrese el Codigo de Seguridad</p><br>
+            <input id="captcha-input" name="security_code" type="text" size="8" autocomplete="Off" onkeydown="testForEnter();" onkeypress="return pulsar(event)">
+          </td>
+        </tr>
+           </table>
+   </section>
         </div>  
         <div>        
                 <table   class="formu" id="AutoNumber2">
@@ -127,17 +126,16 @@
                 <td width="100%" align="center" class="celda"><p size="2">
                 <a href="http://intranetx.adm.ula.ve/ulasire_manual/manual_de_usuario.pdf">Consulta el
                 Manual de Usuario del Sistema (PDF)</a></p></td></tr>
-                </tbody></table></div>             
+                </tbody></table></div>
+               
 </section>
-<script type="text/javascript" language="javascript">
-        document.getElementById("security_code").focus();
+
+<script src="./script2.js"></script>
+<script src="./funcion.js"></script> 
+<script language="javascript">
+        document.getElementById("captcha-input").focus();
         document.proceso.security_code.focus();
         document.proceso.security_code.select();
-
 </script>
-<script>
-apaga();
-</script>
-
 </body>
 </html>
