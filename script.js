@@ -45,3 +45,22 @@ function validateCaptcha() {
         document.getElementById("captcha-input").value = ""; // Limpiar el campo de entrada
     }
 }
+function cambia_estilo(Obj,n) {
+    var t_mensaje = Obj.value;
+    switch (n) {
+    	case 0:
+        {
+	    Obj.style.background='#D4D0C8';
+            Obj.style.color='#000066';
+            break;
+        }
+        case 1:
+        {
+            Obj.style.background='#000066';
+            Obj.style.color='#FFFFFF';
+            break;
+        }
+    }
+    window.status = t_mensaje;
+	return true;
+}
